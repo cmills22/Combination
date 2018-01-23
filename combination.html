@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>To-do List</title>
+        <link rel='stylesheet' href='calendar.css'>
+        <link rel='stylesheet' href='combination.css'>
+    </head>
+    <body>
+        <input type='button' value='Add To-do'id='open'>
+        <div class='popupBackground' id='pop'>
+            <div class='popup'>
+                <span class='close'>&times;</span>
+                <form>
+                    Task name: <input type='text' id='taskName'> Date: <input type='text' id='datepicker'>
+                    <br><br>Status: <select id='status'>
+                        <option>To-Do</option>
+                        <option>In Progress</option>
+                        <option>Done</option>
+                    </select> Tag (optional): <input type='text' id='tag'>
+                    <br><br>Description (optional):
+                    <br><textarea id='textarea'></textarea>
+                    <br><input type='button' value='Save' id='save'><br>
+                </form>
+            </div>
+        </div>
+        <script src='https://code.jquery.com/jquery-1.12.4.js'></script>
+        <script src='https://code.jquery.com/ui/1.12.1/jquery-ui.js'></script>
+        <script>
+            $(function(){
+                $("#datepicker").datepicker();
+            });
+        </script>
+        <script src='combination.js'></script>
+    </body>
+</html>
